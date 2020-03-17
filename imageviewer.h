@@ -51,6 +51,8 @@
 #ifndef IMAGEVIEWER_H
 #define IMAGEVIEWER_H
 
+#define QT_NO_PRINTER
+
 #include <QMainWindow>
 #include <QImage>
 #ifndef QT_NO_PRINTER
@@ -77,7 +79,7 @@ public:
 private slots:
     void open();
     void saveAs();
-    void print();
+//    void print();
     void copy();
     void paste();
     void zoomIn();
@@ -105,7 +107,7 @@ private:
 #endif
 
     QAction *saveAsAct;
-    QAction *printAct;
+//    QAction *printAct;
     QAction *copyAct;
     QAction *zoomInAct;
     QAction *zoomOutAct;

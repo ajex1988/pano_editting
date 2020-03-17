@@ -130,7 +130,7 @@ void ImageViewer::setImage(const QImage &newImage)
     scaleFactor = 1.0;
 
     scrollArea->setVisible(true);
-    printAct->setEnabled(true);
+//    printAct->setEnabled(true);
     fitToWindowAct->setEnabled(true);
     updateActions();
 
@@ -197,25 +197,25 @@ void ImageViewer::saveAs()
 }
 
 //! [5]
-void ImageViewer::print()
-//! [5] //! [6]
-{
-    Q_ASSERT(imageLabel->pixmap());
-#if QT_CONFIG(printdialog)
-//! [6] //! [7]
-    QPrintDialog dialog(&printer, this);
-//! [7] //! [8]
-    if (dialog.exec()) {
-        QPainter painter(&printer);
-        QRect rect = painter.viewport();
-        QSize size = imageLabel->pixmap()->size();
-        size.scale(rect.size(), Qt::KeepAspectRatio);
-        painter.setViewport(rect.x(), rect.y(), size.width(), size.height());
-        painter.setWindow(imageLabel->pixmap()->rect());
-        painter.drawPixmap(0, 0, *imageLabel->pixmap());
-    }
-#endif
-}
+//void ImageViewer::print()
+////! [5] //! [6]
+//{
+//    Q_ASSERT(imageLabel->pixmap());
+//#if QT_CONFIG(printdialog)
+////! [6] //! [7]
+//    QPrintDialog dialog(&printer, this);
+////! [7] //! [8]
+//    if (dialog.exec()) {
+//        QPainter painter(&printer);
+//        QRect rect = painter.viewport();
+//        QSize size = imageLabel->pixmap()->size();
+//        size.scale(rect.size(), Qt::KeepAspectRatio);
+//        painter.setViewport(rect.x(), rect.y(), size.width(), size.height());
+//        painter.setWindow(imageLabel->pixmap()->rect());
+//        painter.drawPixmap(0, 0, *imageLabel->pixmap());
+//    }
+//#endif
+//}
 //! [8]
 
 void ImageViewer::copy()
@@ -321,9 +321,9 @@ void ImageViewer::createActions()
     saveAsAct = fileMenu->addAction(tr("&Save As..."), this, &ImageViewer::saveAs);
     saveAsAct->setEnabled(false);
 
-    printAct = fileMenu->addAction(tr("&Print..."), this, &ImageViewer::print);
-    printAct->setShortcut(QKeySequence::Print);
-    printAct->setEnabled(false);
+//    printAct = fileMenu->addAction(tr("&Print..."), this, &ImageViewer::print);
+//    printAct->setShortcut(QKeySequence::Print);
+//    printAct->setEnabled(false);
 
     fileMenu->addSeparator();
 

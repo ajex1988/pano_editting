@@ -1,7 +1,9 @@
 HEADERS       = glwidget.h \
+                imageviewer.h \
                 sphere.h \
                 window.h
 SOURCES       = glwidget.cpp \
+                imageviewer.cpp \
                 main.cpp \
                 sphere.cpp \
                 window.cpp

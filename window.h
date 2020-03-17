@@ -51,6 +51,7 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
+#include "imageviewer.h"
 #include <QWidget>
 
 class GLWidget;
@@ -61,16 +62,11 @@ class Window : public QWidget
 
 public:
     Window();
-
-private slots:
-    void setCurrentGlWidget();
-    void rotateOneStep();
+    ~Window();
 
 private:
-    enum { NumRows = 1, NumColumns = 2 };
-
-    GLWidget *glWidgets[NumRows][NumColumns];
-    GLWidget *currentGlWidget;
+    GLWidget *glWidget;
+    ImageViewer *imageviewer;
 };
 
 #endif
