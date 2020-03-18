@@ -86,7 +86,7 @@ ImageViewer::ImageViewer(QWidget *parent)
 
     scrollArea->setBackgroundRole(QPalette::Dark);
     scrollArea->setWidget(imageLabel);
-    scrollArea->setVisible(false);
+    scrollArea->setVisible(true);
     setCentralWidget(scrollArea);
 
     createActions();

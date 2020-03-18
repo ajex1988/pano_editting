@@ -148,29 +148,8 @@ void GLWidget::initializeGL()
     program->setUniformValue("texture", 0);
 }
 
-//void GLWidget::paintGL()
-//{
-//    glClearColor(clearColor.redF(), clearColor.greenF(), clearColor.blueF(), clearColor.alphaF());
-//    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-//    QMatrix4x4 m;
-//    m.ortho(-0.5f, +0.5f, +0.5f, -0.5f, 4.0f, 15.0f);
-//    m.translate(0.0f, 0.0f, -10.0f);
-//    m.rotate(xRot / 16.0f, 1.0f, 0.0f, 0.0f);
-//    m.rotate(yRot / 16.0f, 0.0f, 1.0f, 0.0f);
-//    m.rotate(zRot / 16.0f, 0.0f, 0.0f, 1.0f);
 
-//    program->setUniformValue("matrix", m);
-//    program->enableAttributeArray(PROGRAM_VERTEX_ATTRIBUTE);
-//    program->enableAttributeArray(PROGRAM_TEXCOORD_ATTRIBUTE);
-//    program->setAttributeBuffer(PROGRAM_VERTEX_ATTRIBUTE, GL_FLOAT, 0, 3, 5 * sizeof(GLfloat));
-//    program->setAttributeBuffer(PROGRAM_TEXCOORD_ATTRIBUTE, GL_FLOAT, 3 * sizeof(GLfloat), 2, 5 * sizeof(GLfloat));
-
-//    for (int i = 0; i < 6; ++i) {
-//        textures[i]->bind();
-//        glDrawArrays(GL_TRIANGLE_FAN, i * 4, 4);
-//    }
-//}
 
 void GLWidget::paintGL()
 {

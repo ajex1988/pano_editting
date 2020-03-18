@@ -63,7 +63,6 @@ Window::Window()
     mainLayout->addWidget(glWidget, 0, 0);
 
     imageviewer = new ImageViewer;
-    imageviewer->show();
     mainLayout->addWidget(imageviewer,0,1);
 
     setLayout(mainLayout);
