@@ -49,6 +49,7 @@
 ****************************************************************************/
 
 #include <QtWidgets>
+#include <QSurfaceFormat>
 
 #include "glwidget.h"
 #include "window.h"
@@ -60,6 +61,9 @@ Window::Window()
     clearColor.setRgb(255,255,255);
     glWidget = new GLWidget;
     glWidget->setClearColor(clearColor);
+    QSurfaceFormat format;
+    format.setSamples(4); //this creates a 4x MSAA surface format
+    glWidget->setFormat(format);
     mainLayout->addWidget(glWidget, 0, 0);
 
     imageviewer = new ImageViewer;
